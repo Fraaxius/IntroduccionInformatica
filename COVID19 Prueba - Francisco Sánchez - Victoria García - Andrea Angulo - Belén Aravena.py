@@ -18,7 +18,9 @@ sen2 = False
 sen5 = False 
 sen9 = False    
 sen8 = False 
-sen6 = False 
+sen6 = False
+sen3 = False
+sen7 = False
 
 # Presentación y recolección de nombre del paciente
 print ("--- BIENVENIDO(A) AL PROGRAMA DE DIAGNÓSTICO COVID-19 --- \n")
@@ -80,4 +82,118 @@ while not salir:
                 print ("2. No")
                 opcion5 = int(input("Ingrese una opción: "))
                 if opcion5 == 1:
-                    print 
+                    print ("\nDebe aislarse en su domicilio. ")
+                    print (f"Llame al {fonosaludresponde}, teléfono Salud Responde del MINSAL")
+                    print ("Le harán un examen PCR.")
+                    while not sen9:
+                        print ("\nCual es el resultado del examen?")
+                        print ("1. Positivo")
+                        print ("2. Negativo")
+                        opcion6 = int(input("Ingrese una opción: "))
+                        if opcion6 == 1:
+                            print ("\nCaso positivo.")
+                            covidpositivo = True
+                            while not sen8:
+                                print ("¿Cuál es el grado de sus sintomas?")
+                                print ("1. Leves")
+                                print ("2. Graves")
+                                opcion7 = int(input("Ingrese una opción: "))
+                                if opcion7 == 1:
+                                    print (f"\nSr/a {nombre}")
+                                    print (f"Usted debe aislarse en su {domicilio}")
+                                    exit()
+                                elif opcion7 == 2:
+                                    print (f"\nSr/a {nombre}")
+                                    print (f"Según sus sintomas, debería usted ser {hosp}.")
+                                    opcion == 0
+                                    exit ()
+                        elif opcion6 == 2:
+                            print ("\nCaso negativo.")
+                            covidpositivo = False
+                            print (f"Sr/a {nombre}, se descarta el caso de COVID-19.")
+                            opcion = 0
+                            exit ()
+                elif opcion5 == 2:
+                    print (f"\nSr/a {nombre}, ¿Ha estado a menos de dos metros de un contagiado durante un tiempo continuado?")
+                    print ("1. Si")
+                    print ("2. No")
+                    opcion7 = int(input("Ingrese una opción: "))
+                    if opcion7 == 1:
+                        print ("\nDebe aislarse en su domicilio. ")
+                        print (f"Sr/a {nombre}, ¿Aparecen síntomas?")
+                        print ("1. Si")
+                        print ("2. No")
+                        opcion8 = int(input("Ingrese una opción: "))
+                        if opcion8 == 1:      
+                            print (f"Llame al {fonosaludresponde}, teléfono Salud Responde del MINSAL")
+                            print ("Le harán un examen PCR.")
+                            while not sen6:
+                                print ("\nCual es el resultado del examen?")
+                                print ("1. Positivo")
+                                print ("2. Negativo")
+                                opcion9 = int(input("Ingrese una opción: "))
+                                if opcion9 == 1:
+                                    print ("\nCaso positivo.")
+                                    covidpositivo = True
+                                    while not sen8:
+                                        print ("¿Cuál es el grado de sus sintomas?")
+                                        print ("1. Leves")
+                                        print ("2. Graves")
+                                        opcion10 = int(input("Ingrese una opción: "))
+                                        if opcion10 == 1:
+                                            print (f"\nSr/a {nombre}")
+                                            print (f"Usted debe aislarse en su {domicilio}")
+                                            exit()
+                                        elif opcion10 == 2:
+                                            print (f"\nSr/a {nombre}")
+                                            print (f"Según sus sintomas, debería usted ser {hosp}.")
+                                            opcion == 0
+                                            exit ()
+                                elif opcion9 == 2:
+                                    print ("\nCaso negativo.")
+                                    covidpositivo = False
+                                    print (f"Sr/a {nombre}, se descarta el caso de COVID-19.")
+                                    opcion = 0
+                                    exit ()
+                        elif opcion8 == 2:
+                            print ("Continúe hasta los 14 días en cuarentena.")
+                            exit ()
+                    elif opcion7 == 2:
+                        print ("\nDebe aislarse en su domicilio. ")
+                        print (f"Sr/a {nombre}, ¿Aparecen síntomas?")
+                        print ("1. Si")
+                        print ("2. No")
+                        opcion11 = int(input("Ingrese una opción: "))
+                        if opcion11 == 1:
+                            print (f"Llame al {fonosaludresponde}, teléfono Salud Responde del MINSAL")
+                            while not sen3:
+                               print ("\nCual es el resultado del examen?")
+                               print ("1. Positivo")
+                               print ("2. Negativo")
+                               opcion12 = int(input("Ingrese una opción: "))
+                               if opcion12 == 1:
+                                   print ("\nCaso positivo.")
+                                   covidpositivo = True
+                                   while not sen7:
+                                       print ("¿Cuál es el grado de sus sintomas?")
+                                       print ("1. Leves")
+                                       print ("2. Graves")
+                                       opcion13 = int(input("Ingrese una opción: "))
+                                       if opcion13 == 1:
+                                            print (f"\nSr/a {nombre}")
+                                            print (f"Usted debe aislarse en su {domicilio}")
+                                            exit ()
+                                       elif opcion13 == 2:
+                                            print (f"\nSr/a {nombre}")
+                                            print (f"Según sus sintomas, debería usted ser {hosp}.")
+                                            opcion == 0
+                                            exit ()
+                               elif opcion12 == 2:
+                                    print ("\nCaso negativo.")
+                                    covidpositivo = False
+                                    print (f"Sr/a {nombre}, se descarta el caso de COVID-19.")
+                                    opcion = 0
+                                    exit ()
+                        elif opcion11 ==2:
+                            print ("Continúe hasta los 14 días en cuarentena.")
+                            exit ()
